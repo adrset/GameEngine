@@ -1,0 +1,9 @@
+# GameEngine
+Simple GameEngine written in cpp using OpenGL
+
+# Information for future contributors
+- Naming convention
+Variables and instances of classes use camel toe naming convention. example: windowManager
+Class/struct names have first letter uppercase. example: WindowManager
+Constant variables are all uppercase and words are separated by underscore. example: MAX_INSTANCES
+
