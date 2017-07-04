@@ -6,8 +6,6 @@
 #include "inputManager.h"
 namespace GameEngine {
 
-
-
 	class Window {
 	private:
 		static void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
