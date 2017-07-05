@@ -30,9 +30,9 @@ namespace GameEngine {
 		std::cout << "Deleting window" << std::endl;
 	}
 
-	Window::Window(int width, int height, std::string title) {
+	Window::Window(int width, int height, std::string title):infos(width, height, title){
 
-		info(width, height, title);
+		
 
 		if (!glfwInit())
 		{

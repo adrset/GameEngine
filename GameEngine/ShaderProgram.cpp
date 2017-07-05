@@ -19,10 +19,10 @@ namespace GameEngine {
 	void ShaderProgram::init() {
 		glAttachShader(m_programID, m_vertexShaderID);
 		glAttachShader(m_programID, m_fragmentShaderID);
-		bindAttributes();
+		//bindAttributes();
 		glLinkProgram(m_programID);
 		glValidateProgram(m_programID);
-		getAllUniformLocations();
+		//getAllUniformLocations();
 	}
 
 	int ShaderProgram::getUniformLocation(std::string uniformName) {

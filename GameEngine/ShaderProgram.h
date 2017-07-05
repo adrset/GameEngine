@@ -29,8 +29,8 @@ namespace GameEngine {
 		void loadVector2D(int location, glm::vec2 vector);
 		void loadMatrix(int location, glm::mat4 matrix);
 		void bindAttribute(int attribute, std::string variableName);
-		virtual void bindAttributes() = 0;
-		virtual void getAllUniformLocations() = 0;
+		/*virtual void bindAttributes() = 0;
+		virtual void getAllUniformLocations() = 0;*/
 		int getUniformLocation(std::string uniformName);
 	};
 }

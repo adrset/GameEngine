@@ -14,14 +14,16 @@ namespace GameEngine {
 		static void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 		GLFWwindow* m_window;
 		struct info {
-			int width;
-			int height;
+			unsigned int width;
+			unsigned int height;
 			std::string title;
 			info(int w, int h, std::string t) : width(w), height(h), title(t) {};
-		};
+		} infos;
 
 
 	public:
+		
+		struct info getInfo() const { return infos; }
 		static InputManager m_input;
 		GLFWwindow* getWindowID() const { return m_window; }
 		void closeWindow();
