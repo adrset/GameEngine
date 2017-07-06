@@ -59,6 +59,8 @@ namespace GameEngine {
 			fatalError("Failed to initialize GLEW!");
 		}
 
+		glfwSwapInterval(0);
+
 		const GLFWvidmode* vidmode = glfwGetVideoMode(glfwGetPrimaryMonitor());
 		glfwSetWindowPos(m_window, (int)(0.5 * (vidmode->width - width)), int((0.5*(vidmode->height - height))));
 
