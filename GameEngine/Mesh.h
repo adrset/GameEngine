@@ -39,7 +39,7 @@ namespace GameEngine {
 		Mesh(vector<Vertex>& vertices, vector<unsigned int>& indices, vector<Texture>& textures);
 		~Mesh();
 		// render the mesh
-		void draw(Shader shader) const;
+		void draw(Shader& shader) const;
 
 	private:
 		/*  Render data  */

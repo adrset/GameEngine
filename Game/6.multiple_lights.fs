@@ -78,8 +78,9 @@ void main()
         result += CalcPointLight(pointLights[i], norm, FragPos, viewDir);    
     // phase 3: spot light
     result += CalcSpotLight(spotLight, norm, FragPos, viewDir);    
-    
-    FragColor = vec4(result, 1.0);
+    float gamma = 2.2;
+    FragColor.rgb = pow(result.rgb, vec3(1.0/gamma));
+	FragColor.a = 1.0;
 }
 
 // calculates the color when using a directional light.

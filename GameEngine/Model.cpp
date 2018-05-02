@@ -2,7 +2,7 @@
 
 namespace GameEngine {
 	
-	void Model::draw(Shader shader)
+	void Model::draw(Shader& shader)
 	{
 		for (unsigned int i = 0; i < meshes.size(); i++)
 			meshes[i].draw(shader);
@@ -10,7 +10,7 @@ namespace GameEngine {
 
 	void Model::loadModel(std::string path) {
 		Assimp::Importer importer;
-		const aiScene *scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_FlipUVs);
+		const aiScene *scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_FlipUVs | aiProcess_CalcTangentSpace );
 
 		if (!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode)
 		{

@@ -32,7 +32,7 @@ namespace GameEngine {
 			stbi_image_free(data);
 		}
 		else {
-			fatalError("Could not load the texture!");
+			fatalError("Could not load the texture!!" + textureName);
 		}
 
 	}
@@ -68,7 +68,7 @@ namespace GameEngine {
 			stbi_image_free(data);
 		}
 		else {
-			fatalError("Could not load the texture!");
+			fatalError("Could not load the texture!" + path);
 		}
 
 	}

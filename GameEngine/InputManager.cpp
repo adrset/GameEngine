@@ -26,7 +26,17 @@ namespace GameEngine {
 		m_keyMap[keyID] = false;
 	}
 
+	glm::vec2 InputManager::getDXY() {
+		glm::vec2 temp = m_mouseCoordsD;
+		m_mouseCoordsD = glm::vec2(0.0f);
+		return temp;
+	}
+
 	void InputManager::setMouseCoords(float x, float y) {
+
+		m_mouseCoordsD.x = x - m_mouseCoords.x;
+		m_mouseCoordsD.y = y - m_mouseCoords.y;
+
 		m_mouseCoords.x = x;
 		m_mouseCoords.y = y;
 	}

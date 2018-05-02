@@ -16,7 +16,7 @@ namespace GameEngine {
 		/*  Functions   */
 		Model(char *path);
 		~Model();
-		void draw(Shader shader);
+		void draw(Shader& shader);
 	private:
 		/*  Model Data  */
 		std::vector<Mesh> meshes;

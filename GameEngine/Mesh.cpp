@@ -11,7 +11,7 @@ namespace GameEngine {
 		setupMesh();
 	}
 
-	void Mesh::draw(Shader shader) const {
+	void Mesh::draw(Shader& shader) const {
 		// bind appropriate textures
 		unsigned int diffuseNr = 1;
 		unsigned int specularNr = 1;
@@ -58,6 +58,7 @@ namespace GameEngine {
 		// set the vertex attribute pointers
 		// vertex Positions
 		glEnableVertexAttribArray(0);
+		//                    id, size, type, normalize, numbytes, offset
 		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)0);
 		// vertex normals
 		glEnableVertexAttribArray(1);

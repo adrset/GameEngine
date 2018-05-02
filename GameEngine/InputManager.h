@@ -10,6 +10,7 @@ namespace GameEngine {
 		~InputManager();
 
 		void update();
+		glm::vec2 getDXY();
 		bool wasMouseKeyDown(unsigned int keyID);
 		bool isMouseKeyPressed(unsigned int keyID);
 		void pressMouseKey(unsigned int keyID);
@@ -25,6 +26,7 @@ namespace GameEngine {
 
 		void addScroll(glm::vec2 scroll);
 		glm::vec2 getMouseCoords() const { return m_mouseCoords; }
+		glm::vec2 getMouseCoordsD() const { return m_mouseCoordsD; }
 	private:
 		bool wasKeyDown(unsigned int keyID);
 		std::unordered_map<unsigned int, bool> m_mouseKeyMap;
@@ -35,6 +37,8 @@ namespace GameEngine {
 		glm::vec2 m_scroll;
 
 		glm::vec2 m_mouseCoords;
+
+		glm::vec2 m_mouseCoordsD;
 	};
 
 }
